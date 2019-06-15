@@ -1,0 +1,93 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="home.css" />
+</head>
+<body>
+  <center><h1>MHbaby</h1></center>
+  <div class="navbar">
+  <a href="index.html"><b>Home</b></a>
+  <a href="gravidez.html"><b>Teste</b></a>
+  <div class="dropdown">
+  <button class="dropbtn" href="slide.html"><b>Tentantes</b>
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="gravidez01.html">Os principais sintomas da gravidez</a>
+    </div>
+  </div> 
+</div>
+
+
+<br><br>
+
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 3</div>
+  <img src="1.jpg" style="width:100%">
+  
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 3</div>
+  <img src="2.jpg" style="width:100%">
+ 
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 3</div>
+  <img src="3.png" style="width:100%">
+  
+</div>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+</div>
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<footer align='justify'>
+      As informações contidas neste site não são intencionais ou implícitas como substitutas de aconselhamento médico profissional, diagnóstico ou tratamento.
+ Todo o conteúdo, incluindo texto, gráficos, imagens e informações,
+ contidos ou disponíveis através deste site é apenas para fins de informação geral.
+ O objetivo disso é ajudar nas dúvidas em relação aos sintomas e criar melhores conversas entre os pacientes e seus profissionais de saúde.
+      <br><br><br>
+      <center>Autor(es): Maria Eduarda e Francisco Herick</center>
+      <center>Tel: (85) 99118-3287 - (85) 98857-2465</center>
+      <center>Universidade Federal do Ceará - Campus Quixadá</center>
+
+</footer>
+
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 2000); 
+}
+</script>
+
+</body>
+</html> 
