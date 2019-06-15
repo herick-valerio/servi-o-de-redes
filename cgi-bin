@@ -1,0 +1,139 @@
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+# Import modules for CGI handling 
+import cgi, cgitb
+
+# Create instance of FieldStorage 
+form = cgi.FieldStorage() 
+
+sn1=0
+sn2=0
+sn3=0
+sn4=0
+sn5=0
+sn6=0
+sn7=0
+sn8=0
+sn9=0
+sn10=0
+soma=0
+porc=0
+q1="OPCAO01"
+q2="OPCAO02"
+q3="OPCAO03"
+q4="OPCAO04"
+q5="OPCAO05"
+q6="OPCAO06"
+q7="OPCAO07"
+q8="OPCAO08"
+q9="OPCAO09"
+q10="OPCAO010"
+
+s ="sim"
+n ="nao"
+nc="nao regular"
+op1 = form.getvalue("OPCAO01")
+op2 = form.getvalue("OPCAO02")
+op3 = form.getvalue("OPCAO03")
+op4 = form.getvalue("OPCAO04")
+op5 = form.getvalue("OPCAO05")
+op6 = form.getvalue("OPCAO06")
+op7 = form.getvalue("OPCAO07")
+op8 = form.getvalue("OPCAO08")
+op9 = form.getvalue("OPCAO09")
+op10 = form.getvalue("OPCAO10")
+
+print "Content-type:text/html\r\n\r\n"
+print "<html>"
+print "<head>"
+print " <link rel='stylesheet' type='text/css' href='estilo.css' />"
+print "<meta charset='utf-8'>"
+print "<title>Serviços de Redes</title>"
+print "</head>"
+print "<body>"
+print "<center><h1 style = 'font-size: 36px' style='font-family: calibri'>MHbaby</h1></center>"
+print "</body>"
+print "</html>"
+if op1==s and q1=="OPCAO01":
+	sn1=30
+else:
+	sn1=0
+if op2==s and q2=="OPCAO02":
+	sn2=3.75
+else:
+	sn2=0
+
+if op3==s and q3=="OPCAO03":
+        sn3=50
+elif op3==nc and q3=="OPCAO03":
+	sn3=0
+else:
+        sn3=0
+
+if op4==s and q4=="OPCAO04":
+        sn4=3
+else:
+        sn4=0
+
+if op5==s and q5=="OPCAO05":
+        sn5=4
+else:
+        sn5=0
+
+if op6==s and q6=="OPCAO06":
+        sn6=2.5
+else:
+        sn6=0
+
+if op7==s and q7=="OPCAO07":
+        sn7=2
+else:
+        sn7=0
+
+if op8==s and q8=="OPCAO08":
+        sn8=1.75
+else:
+        sn8=0
+
+if op9==s and q9=="OPCAO09":
+        sn9=2
+else:
+        sn9=0
+
+if op10==s and q10=="OPCAO010":
+        sn10=1
+else:
+        sn10=0
+
+soma=sn1+sn2+sn3+sn4+sn5+sn6+sn7+sn8+sn9+sn10
+porc=(soma/100)
+p=(porc*100)
+#print "%.4f" % (porc)
+#print("valor de a: {}%".format(p))
+print "<br> "
+if p>=60:
+	print "<center>"
+	print "PARABÉNS MAMÃE <br> <br>"
+	print "Pelo número de sintomas relatados possivelmente você está sim grávida. <br>"
+
+	print "Mas é bom lembrar que somente um teste sanguíneo pode lhe dizer isso com certeza.<br>" 
+
+	print "Boa sorte !!"
+if p<=25:
+	print "<center>"
+	print "VC NÃO ESTÁ GRÁVIDA<br><br>"
+	print "Pelos sintomas que você relatou você provavelmente não está grávida,<br>" 
+	print "mas se ainda assim estiver na dúvida, faça um exame de sangue só ele pode dar certeza.<br>"
+
+	print "Boa sorte!!"
+
+ 
+
+if p>=26 and p<=59:
+	print "<center"
+	print "<br>"
+	print "PROVAVELMENTE VC ESTÁ GRÁVIDA <br><br>"
+	print "Na dúvida faça um exame de sangue só ele pode dar certeza. <br>"
+
+        print "Boa sorte!!"
+
