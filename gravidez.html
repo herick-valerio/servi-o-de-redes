@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+<head>
+  <link rel="stylesheet" type="text/css" href="estilo.css" />
+    <script type="text/javascript" src="script.js"></script>    
+
+  <meta charset="utf-8">
+    <title>Trabalho final</title>
+    	
+
+</head>
+<body onload="javascript:aoCarregar();">
+	<center><h1 style = "font-size: 36px" style="font-family: calibri">MHbaby</h1></center>
+	<div class="navbar">
+  <a href="index.html">Home</a>
+  <a href="gravidez.html">Teste</a>
+  <div class="dropdown">
+  <button class="dropbtn" href="slide.html"><b>Tentantes</b>
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="gravidez01.html">Os principais sintomas da gravidez</a>
+    </div>
+  </div> 
+</div>
+
+<form id="my-form" name ="nome do questionario" method = "post" action="cgi-bin/resp.py">
+	
+  <center><h1> Questionário</h1></center>
+    <br><br>
+
+<center><div><img src="bebe.jpg" alt="some text" width=700 height=150></div></center>
+  <div class="text-center"><a class="linkbotao" type="button"  href="#quiz">Iniciar questionário</a></div>
+  <br> <br> <br> 
+  <div>
+  <p>Uma maneira de ter certeza de que está grávida é fazendo um teste de gravidez. Não é necessário esperar até que sua menstruação atrase antes de fazer o teste, algumas mulheres podem perceber um ou dois sintomas nos estágios iniciais da gravidez. Caso não possa comprar um teste de gravidez agora, tente responder ao nosso divertido questionário de apenas 10 perguntas para verificar se seus sintomas podem ser uma dica precoce.</p></div>
+ <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
+  <section id="quiz">
+  	<hr/>
+	<input type="hidden" id="perguntaActual" value=""/><br />
+	<div  id="pergunta1"class="qans-level">Passo 1 de 10
+	<h3 >Você teve relação sexual sem usar um método contraceptivo durante o último ciclo?</h3>
+		<br><INPUT TYPE="RADIO"  NAME="OPCAO01" class="radioCheck" VALUE="sim"> SIM <br>
+		<INPUT TYPE="RADIO" NAME="OPCAO01" class="radioCheck" VALUE="nao"> NÃO
+	</div>
+	<div id="pergunta2" class="qans-level">Passo 2 de 10
+	<h3>Corrimento vaginal cor-de-rosa?</h3>
+		<br><INPUT TYPE="RADIO" NAME="OPCAO02" class="radioCheck" VALUE="sim"> SIM <br>
+		<INPUT TYPE="RADIO" NAME="OPCAO02" class="radioCheck" VALUE="nao"> NÃO
+	</div>
+	<div  id="pergunta3"class="qans-level">Passo 3 de 10
+	<h3>Menstruação atrasada?</h3>
+		<br><INPUT TYPE="RADIO"  NAME="OPCAO03" class="radioCheck" VALUE="sim"> SIM <br>
+		<INPUT TYPE="RADIO" NAME="OPCAO03"  class="radioCheck" VALUE="nao"> NÃO
+		<input type="radio" name="OPCAO03"  class="radioCheck" value="nao regular">CICLO NÃO REGULAR
+	</div>
+		<div id="pergunta4" class="qans-level">Passo 4 de 10
+	<h3>Cólica e inchaço abdominal?</h3>
+		<br><INPUT TYPE="RADIO" NAME="OPCAO04"  class="radioCheck" VALUE="sim"> SIM <br>
+		<INPUT TYPE="RADIO" NAME="OPCAO04"  class="radioCheck" VALUE="nao"> NÃO
+	</div>
+	<div  id="pergunta5"class="qans-level">Passo 5 de 10
+	<h3 >Mamas sensíveis e inchadas?</h3>
+		<br><INPUT TYPE="RADIO"  NAME="OPCAO05"  class="radioCheck" VALUE="sim"> SIM <br>
+		<INPUT TYPE="RADIO" NAME="OPCAO05"  class="radioCheck" VALUE="nao"> NÃO
+	</div>
+	<div id="pergunta6" class="qans-level">Passo 6 de 10
+	<h3>Cansaço fácil?</h3>
+		<br><INPUT TYPE="RADIO" NAME="OPCAO06"  class="radioCheck" VALUE="sim"> SIM <br>
+		<INPUT TYPE="RADIO" NAME="OPCAO06"  class="radioCheck" VALUE="nao"> NÃO
+	</div>
+	<div  id="pergunta7"class="qans-level">Passo 7 de 10
+	<h3>Aversão a cheiros fortes?</h3>
+		<br><INPUT TYPE="RADIO"  NAME="OPCAO07"  class="radioCheck" VALUE="sim"> SIM <br>
+		<INPUT TYPE="RADIO" NAME="OPCAO07"  class="radioCheck" VALUE="nao"> NÃO
+	</div>
+	<div id="pergunta8" class="qans-level">Passo 8 de 10
+	<h3>Enjoos, vômitos ou salivação excessiva?</h3>
+		<br><INPUT TYPE="RADIO" NAME="OPCAO08"  class="radioCheck" VALUE="sim"> SIM <br>
+		<INPUT TYPE="RADIO" NAME="OPCAO08"  class="radioCheck" VALUE="nao"> NÃO
+	</div>
+	<div  id="pergunta9"class="qans-level">Passo 9 de 10
+	<h3>Tonturas, sono e dor de cabeça?</h3>
+		<br><INPUT TYPE="RADIO"  NAME="OPCAO09"  class="radioCheck" VALUE="sim"> SIM <br>
+		<INPUT TYPE="RADIO" NAME="OPCAO09"  class="radioCheck"VALUE="nao"> NÃO
+	</div>
+	<div id="pergunta10" class="qans-level">Passo 10 de 10
+	<h3>Aumento da vontade para urinar?</h3>
+		<br><INPUT TYPE="RADIO" NAME="OPCAO10"  class="radioCheck" VALUE="sim"> SIM <br>
+		<INPUT TYPE="RADIO" NAME="OPCAO10"  class="radioCheck" VALUE="nao"> NÃO
+	</div>
+
+	<!--<div id="pergunta3">Notou alguma mudança em seus seios?</div>
+	<div id="pergunta4">Você se sentiu enjoada recentemente?</div>
+	<div id="pergunta5">Como estão seus níveis de energia?</div>-->
+	<br>
+	<div class="du">
+	<a href="javascript:perguntaAnterior();"><center>Pergunta anterior</a></center>
+	<a href="javascript:proximaPergunta();"><center>Pergunta seguinte</a></center></div>
+
+  </section>
+  <br><br>
+
+<center><button value = "Select Subject" >Calcular</button></center>
+<br><br>
+<p>Referencias</p>
+<div>
+	<ol>
+		<li>DRª. SHEILA SEDICIASGINECOLOGISTAATUALIZADO EM MAIO 2019. 10 sinais de que você pode estar grávida. Disponível em:https://www.tuasaude.com/10-primeiros-sintomas-de-gravidez</li>
+		<li>Primeiros Sintomas de Gravidez - Será Que Você Está Grávida?Disponível em:https://www.greenme.com.br/viver/saude-e-bem-estar/3363-sintomas-gravidez</li>
+		<li>What are some common signs of pregnancy? Disponível em: https://www.nichd.nih.gov/health/topics/pregnancy/conditioninfo/signs</li>
+		<li>Pregnancy Symptoms - Early Signs of Pregnancy. Disponível em: https://americanpregnancy.org/getting-pregnant/early-pregnancy-symptoms</li>
+		<li>GNOTH, Christian et al. Time to pregnancy: results of the German prospective study and impact on the management of infertility. Human reproduction, v. 18, n. 9, p. 1959-1966, 2003.</li>
+	</ol>
+
+</div>
+
+	</form>
+	<br><br><br><br><br><br><br><br>
+
+	<script type="text/javascript">
+	
+	
+		document.getElementById("my-form").addEventListener("submit", function(e) {
+		
+		
+			var radioUniqueByName = [];		
+			var lastRadioUniqueByName = '';
+			var classname = document.getElementsByClassName("radioCheck");
+			
+			//Vamos capturar todos os elementos dinamicamente que tem a classe radioCheck
+			for (var i = 0; i < classname.length; i++) {
+				var nameOfButton = classname[i].getAttribute('name');
+				
+				if(nameOfButton != lastRadioUniqueByName){
+					radioUniqueByName.push(nameOfButton);
+				}
+				
+				lastRadioUniqueByName = nameOfButton;
+			}
+			
+			//Agora vamos percorrer todos os radiosButtons e ter certeza que ao menos um dos Radios esta 'checked'.
+			for(var i in radioUniqueByName){
+				
+				var atLastOneChecked = false;
+				
+				var uniqueRadio = radioUniqueByName[i];
+				var elementToCheck = document.getElementsByName(uniqueRadio);
+				
+				//for(x in elementToCheck){
+				for (var x = 0; x < classname.length; x++) {					
+				
+					// elementToCheck[x] != null  -> Evita erro de undefined
+					if(elementToCheck[x] != null && elementToCheck[x].checked !== false){
+						//Tem um elemento checado
+						atLastOneChecked = true;
+					}
+					
+				}
+				
+				//Se não tiver ao menos um checkado para a execução e retorna como false
+				if(!atLastOneChecked){
+					alert("Selecione o campo -> " + uniqueRadio);
+					e.preventDefault();
+					return false;
+				}
+			}
+		});
+		
+		
+	</script>
+	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<footer align='justify'>
+      As informações contidas neste site não são intencionais ou implícitas como substitutas de aconselhamento médico profissional, diagnóstico ou tratamento. Todo o conteúdo, incluindo texto, gráficos, imagens e informações, contidos ou disponíveis através deste site é apenas para fins de informação geral. O objetivo disso é ajudar nas dúvidas em relação aos sintomas e criar melhores conversas entre os pacientes e seus profissionais de saúde.
+      <br><br><br>
+      <center>Autor(es): Maria Eduarda e Francisco Herick</center>
+      <center>Tel: (85) 99118-3287 - (85) 98857-2465</center>
+      <center>Universidade Federal do Ceará - Campus Quixadá</center>
+
+</footer>
+</body>
+</html>
